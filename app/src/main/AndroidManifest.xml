@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.safefirst">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SafeFirst"
+        tools:targetApi="31">
+
+        <!-- MOH View -->
+        <activity
+            android:name=".userquarantine.MOHView"
+            android:exported="true"
+            android:parentActivityName=".userquarantine.MainActivity"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".userquarantine.Controller.MOHViewSelfTestResult"
+            android:exported="false"
+            android:label="View Self Test Result(MOH)"
+            android:parentActivityName=".userquarantine.MOHView"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".userquarantine.Controller.MOHAddSelfTestResult"
+            android:exported="false"
+            android:label="Add Self Test Result(MOH)"
+            android:parentActivityName=".userquarantine.MOHView"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".userquarantine.Controller.MOHUpdateSelfTestResult"
+            android:exported="false"
+            android:label="Update Self Test Result(MOH)"
+            android:parentActivityName=".userquarantine.Controller.MOHViewSelfTestResult"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+
+        <!-- User View -->
+        <activity
+            android:name=".userquarantine.Controller.ViewQuarantineRecord"
+            android:exported="false"
+            android:parentActivityName=".userquarantine.UserView"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".userquarantine.Controller.AddQuarantineRecord"
+            android:exported="false"
+            android:parentActivityName=".userquarantine.UserView"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".userquarantine.Controller.AddHealthAssessment"
+            android:exported="false"
+            android:parentActivityName=".userquarantine.UserView"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".userquarantine.Controller.AddSelfTestResult"
+            android:exported="false"
+            android:parentActivityName=".userquarantine.MainActivity"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".userquarantine.UserView"
+            android:exported="true"
+            android:parentActivityName=".userquarantine.MainActivity"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".userquarantine.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Design.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

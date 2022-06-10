@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">SafeFirst</string>
+    <string name="user_name">Ali bin Ahmad</string>
+    <string name="user_ic">880104201987</string>
+    <string name="ha_q1">
+        1. Are you exhibiting 2 or more symptoms that are listed below?\n
+        - Fever\n
+        - Chill\n
+        - Runny Nose\n
+        - Fatigue\n
+        - Nausea\n
+        - Headache
+    </string>
+    <string name="ha_q2">
+        2. Have you attended any event/areas associated with known COVID-19 cluster?
+    </string>
+    <string name="ha_q3">
+        3. Have you travelled abroad within the last 14 days?
+    </string>
+    <string name="ha_q4">
+        4. Have you had close contact with any confirmed or suspected COVID-19 cases within the last 14 days?
+    </string>
+    <string name="ha_q5">
+        5. Are you a MOH COVID-19 volunteer in the last 14 days?
+    </string>
+</resources>
