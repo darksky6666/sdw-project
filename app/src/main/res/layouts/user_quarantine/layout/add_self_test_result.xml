@@ -162,9 +162,11 @@
         android:id="@+id/relativeLayout2"
         android:layout_width="348dp"
         android:layout_height="412dp"
+        android:layout_marginBottom="32dp"
         android:background="#FFFFFF"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="398dp">
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <TextView
