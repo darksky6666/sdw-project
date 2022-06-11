@@ -1,4 +1,4 @@
-package com.example.safefirst.userquarantine.Model;
+package com.example.safefirst.userquarantine.Controller;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -13,15 +13,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.safefirst.R;
-import com.example.safefirst.userquarantine.Controller.MOHUpdateSelfTestResult;
 
 import java.util.ArrayList;
 
-public class SelfTestAdapter extends RecyclerView.Adapter<SelfTestAdapter.viewHolder> {
+public class MOHSelfTestAdapter extends RecyclerView.Adapter<MOHSelfTestAdapter.viewHolder> {
 
     private Context context;
     Activity activity;
@@ -29,14 +27,14 @@ public class SelfTestAdapter extends RecyclerView.Adapter<SelfTestAdapter.viewHo
 
     Animation translate_anim;
 
-    public SelfTestAdapter(Activity activity,
-                           Context context,
-                           ArrayList Test_ID,
-                           ArrayList Test_Place,
-                           ArrayList Test_Type,
-                           ArrayList Test_Date,
-                           ArrayList Test_Result,
-                           ArrayList User_phoneNum) {
+    public MOHSelfTestAdapter(Activity activity,
+                              Context context,
+                              ArrayList Test_ID,
+                              ArrayList Test_Place,
+                              ArrayList Test_Type,
+                              ArrayList Test_Date,
+                              ArrayList Test_Result,
+                              ArrayList User_phoneNum) {
         this.activity = activity;
         this.context = context;
         this.Test_ID = Test_ID;

@@ -1,9 +1,5 @@
 package com.example.safefirst.userquarantine.Controller;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
@@ -11,8 +7,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.safefirst.R;
-import com.example.safefirst.userquarantine.Model.MainDB;
+import com.example.safefirst.userquarantine.Model.SelfTestModel;
 
 public class MOHUpdateSelfTestResult extends AppCompatActivity {
 
@@ -44,7 +44,7 @@ public class MOHUpdateSelfTestResult extends AppCompatActivity {
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainDB db = new MainDB(MOHUpdateSelfTestResult.this);
+                SelfTestModel db = new SelfTestModel(MOHUpdateSelfTestResult.this);
                 place=editTextTestPlace.getText().toString().trim();
                 type=editTextTestType.getText().toString().trim();
                 date=editTextTestDate.getText().toString().trim();
@@ -97,7 +97,7 @@ public class MOHUpdateSelfTestResult extends AppCompatActivity {
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                MainDB db = new MainDB(MOHUpdateSelfTestResult.this);
+                SelfTestModel db = new SelfTestModel(MOHUpdateSelfTestResult.this);
                 db.deleteSelfTest(id);
                 finish();
             }

@@ -19,51 +19,51 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.safefirst.R;
-import com.example.safefirst.userquarantine.Model.SelfTestModel;
+import com.example.safefirst.userquarantine.Model.QuarantineRecordModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
-public class MOHViewSelfTestResult extends AppCompatActivity {
+public class MOHViewUserQuarantine extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    FloatingActionButton add_button;
-    ImageView imageView_emptydata;
-    TextView textView_emptydata;
+    FloatingActionButton add_button2;
+    ImageView imageView_emptydata2;
+    TextView textView_emptydata2;
 
-    SelfTestModel db;
-    ArrayList<String> Test_ID, Test_Place, Test_Type, Test_Date, Test_Result, User_phoneNum;
-    MOHSelfTestAdapter selfTestAdapter;
+    QuarantineRecordModel db;
+    ArrayList<String> UserQ_ID, UserQ_Type, UserQ_Location, UserQ_startDate, UserQ_endDate, User_phoneNum;
+    MOHUserQuarantineAdapter mohUserQuarantineAdapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.moh_view_self_test_result);
+        setContentView(R.layout.moh_view_user_quarantine_record);
 
         recyclerView = findViewById(R.id.recyclerView);
-        add_button = findViewById(R.id.add_button);
-        imageView_emptydata = findViewById(R.id.imageView_emptydata);
-        textView_emptydata = findViewById(R.id.textView_emptydata);
-        add_button.setOnClickListener(new View.OnClickListener() {
+        add_button2 = findViewById(R.id.add_button2);
+        imageView_emptydata2 = findViewById(R.id.imageView_emptydata2);
+        textView_emptydata2 = findViewById(R.id.textView_emptydata2);
+        add_button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MOHViewSelfTestResult.this, MOHAddSelfTestResult.class);
+                Intent intent = new Intent(MOHViewUserQuarantine.this, MOHAddUserQuarantine.class);
                 startActivity(intent);
             }
         });
 
-        db = new SelfTestModel(MOHViewSelfTestResult.this);
-        Test_ID = new ArrayList<>();
-        Test_Place = new ArrayList<>();
-        Test_Type = new ArrayList<>();
-        Test_Date = new ArrayList<>();
-        Test_Result = new ArrayList<>();
+        db = new QuarantineRecordModel(MOHViewUserQuarantine.this);
+        UserQ_ID = new ArrayList<>();
+        UserQ_Type = new ArrayList<>();
+        UserQ_Location = new ArrayList<>();
+        UserQ_startDate = new ArrayList<>();
+        UserQ_endDate = new ArrayList<>();
         User_phoneNum = new ArrayList<>();
 
         storeDataInArrays();
-        selfTestAdapter = new MOHSelfTestAdapter(MOHViewSelfTestResult.this, this, Test_ID, Test_Place, Test_Type, Test_Date, Test_Result, User_phoneNum);
-        recyclerView.setAdapter(selfTestAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(MOHViewSelfTestResult.this));
+        mohUserQuarantineAdapter = new MOHUserQuarantineAdapter(MOHViewUserQuarantine.this, this, UserQ_ID, UserQ_Type, UserQ_Location, UserQ_startDate, UserQ_endDate, User_phoneNum);
+        recyclerView.setAdapter(mohUserQuarantineAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(MOHViewUserQuarantine.this));
     }
 
     @Override
@@ -75,19 +75,19 @@ public class MOHViewSelfTestResult extends AppCompatActivity {
     }
 
     void storeDataInArrays() {
-        Cursor cursor = db.displaySelfTest();
+        Cursor cursor = db.displayUQ();
         if (cursor.getCount() == 0) {
-            imageView_emptydata.setVisibility(View.VISIBLE);
-            textView_emptydata.setVisibility(View.VISIBLE);
+            imageView_emptydata2.setVisibility(View.VISIBLE);
+            textView_emptydata2.setVisibility(View.VISIBLE);
         } else {
-            imageView_emptydata.setVisibility(View.GONE);
-            textView_emptydata.setVisibility(View.GONE);
+            imageView_emptydata2.setVisibility(View.GONE);
+            textView_emptydata2.setVisibility(View.GONE);
             while (cursor.moveToNext()) {
-                Test_ID.add(cursor.getString(0));
-                Test_Place.add(cursor.getString(1));
-                Test_Type.add(cursor.getString(2));
-                Test_Date.add(cursor.getString(3));
-                Test_Result.add(cursor.getString(4));
+                UserQ_ID.add(cursor.getString(0));
+                UserQ_Type.add(cursor.getString(1));
+                UserQ_Location.add(cursor.getString(2));
+                UserQ_startDate.add(cursor.getString(3));
+                UserQ_endDate.add(cursor.getString(4));
                 User_phoneNum.add(cursor.getString(5));
             }
         }
@@ -115,9 +115,9 @@ public class MOHViewSelfTestResult extends AppCompatActivity {
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                SelfTestModel db = new SelfTestModel(MOHViewSelfTestResult.this);
-                db.deleteAllSelfTest();
-                Intent intent = new Intent(MOHViewSelfTestResult.this, MOHViewSelfTestResult.class);
+                QuarantineRecordModel db = new QuarantineRecordModel(MOHViewUserQuarantine.this);
+                db.deleteAllUQ();
+                Intent intent = new Intent(MOHViewUserQuarantine.this, MOHViewUserQuarantine.class);
                 startActivity(intent);
                 finish();
             }

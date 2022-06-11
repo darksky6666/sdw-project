@@ -71,7 +71,7 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
-        android:layout_width="412dp"
+        android:layout_width="wrap_content"
         android:layout_height="59dp"
         android:background="@color/white"
         app:itemBackground="@drawable/bg_nav_item"

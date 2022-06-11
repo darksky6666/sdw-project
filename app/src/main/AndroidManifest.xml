@@ -30,13 +30,32 @@
             android:name=".userquarantine.Controller.MOHAddSelfTestResult"
             android:exported="false"
             android:label="Add Self Test Result(MOH)"
-            android:parentActivityName=".userquarantine.MOHView"
+            android:parentActivityName=".userquarantine.Controller.MOHViewSelfTestResult"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity
             android:name=".userquarantine.Controller.MOHUpdateSelfTestResult"
             android:exported="false"
             android:label="Update Self Test Result(MOH)"
             android:parentActivityName=".userquarantine.Controller.MOHViewSelfTestResult"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+
+        <activity
+            android:name=".userquarantine.Controller.MOHViewUserQuarantine"
+            android:exported="false"
+            android:label="View User Quarantine Record(MOH)"
+            android:parentActivityName=".userquarantine.MOHView"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".userquarantine.Controller.MOHAddUserQuarantine"
+            android:exported="false"
+            android:label="Add User Quarantine Record(MOH)"
+            android:parentActivityName=".userquarantine.Controller.MOHViewUserQuarantine"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".userquarantine.Controller.MOHUpdateUserQuarantine"
+            android:exported="false"
+            android:label="Update User Quarantine Record(MOH)"
+            android:parentActivityName=".userquarantine.Controller.MOHViewUserQuarantine"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
 
         <!-- User View -->

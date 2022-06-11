@@ -16,12 +16,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTestPlace"
+        android:id="@+id/editTextUQType"
         android:layout_width="363dp"
         android:layout_height="54dp"
         android:layout_marginTop="120dp"
         android:ems="10"
-        android:hint="Test Place"
+        android:hint="User Quarantine Type"
         android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,35 +30,49 @@
         app:layout_constraintTop_toTopOf="@+id/view" />
 
     <EditText
-        android:id="@+id/editTextTestDate"
+        android:id="@+id/editTextUQLocation"
+        android:layout_width="358dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="User Quarantine Location"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUQType" />
+
+    <EditText
+        android:id="@+id/editTextUQstartDate"
         android:layout_width="358dp"
         android:layout_height="56dp"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="Test Date"
+        android:hint="User Quarantine Start Date"
         android:inputType="date"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.603"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTestType" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextUQLocation" />
 
     <EditText
-        android:id="@+id/editTextTestResult"
+        android:id="@+id/editTextendDate"
         android:layout_width="363dp"
         android:layout_height="54dp"
         android:layout_marginTop="36dp"
         android:ems="10"
-        android:hint="Test Result"
-        android:inputType="text"
+        android:hint="User Quarantine End Date"
+        android:inputType="date"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.604"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTestDate" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextUQstartDate" />
 
     <EditText
-        android:id="@+id/editTextUser"
+        android:id="@+id/editTextUser2"
         android:layout_width="363dp"
         android:layout_height="54dp"
         android:layout_marginTop="32dp"
@@ -69,10 +83,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTestResult" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextendDate" />
 
     <Button
-        android:id="@+id/add_button"
+        android:id="@+id/add_button2"
         android:layout_width="209dp"
         android:layout_height="55dp"
         android:layout_marginTop="52dp"
@@ -81,21 +95,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextUser" />
-
-    <EditText
-        android:id="@+id/editTextTestType"
-        android:layout_width="358dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:hint="Test Type"
-        android:inputType="text"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.603"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTestPlace" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextUser2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

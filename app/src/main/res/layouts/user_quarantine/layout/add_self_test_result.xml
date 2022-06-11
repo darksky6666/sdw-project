@@ -162,7 +162,7 @@
         android:id="@+id/relativeLayout2"
         android:layout_width="348dp"
         android:layout_height="412dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="6dp"
         android:background="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -194,7 +194,7 @@
             android:layout_marginBottom="251dp"
             android:backgroundTint="#000000"
             android:ems="10"
-            android:inputType="date"
+            android:inputType="text"
             android:textColor="@color/black"
             android:visibility="visible" />
 
@@ -229,7 +229,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/confirm_button"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -245,7 +245,7 @@
             app:strokeWidth="2dp" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/cancel_button"
             android:layout_width="112dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -299,7 +299,7 @@
             android:layout_marginBottom="329dp"
             android:backgroundTint="#000000"
             android:ems="10"
-            android:inputType="date"
+            android:inputType="text"
             android:textColor="@color/black"
             android:visibility="visible" />
 

@@ -1,15 +1,14 @@
 package com.example.safefirst.userquarantine.Controller;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.safefirst.R;
-import com.example.safefirst.userquarantine.Model.MainDB;
+import com.example.safefirst.userquarantine.Model.SelfTestModel;
 
 public class MOHAddSelfTestResult extends AppCompatActivity {
 
@@ -30,7 +29,7 @@ public class MOHAddSelfTestResult extends AppCompatActivity {
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainDB db = new MainDB(MOHAddSelfTestResult.this);
+                SelfTestModel db = new SelfTestModel(MOHAddSelfTestResult.this);
                 db.addSelfTest(editTextTestPlace.getText().toString().trim(),
                         editTextTestType.getText().toString().trim(),
                         editTextTestDate.getText().toString().trim(),

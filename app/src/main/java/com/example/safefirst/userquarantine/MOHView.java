@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
 import com.example.safefirst.userquarantine.Controller.MOHViewSelfTestResult;
+import com.example.safefirst.userquarantine.Controller.MOHViewUserQuarantine;
 
 public class MOHView extends AppCompatActivity {
 
@@ -25,6 +26,15 @@ public class MOHView extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MOHView.this, MOHViewSelfTestResult.class);
+                startActivity(intent);
+            }
+        });
+
+        quarantineRecord = findViewById(R.id.button7);
+        quarantineRecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MOHView.this, MOHViewUserQuarantine.class);
                 startActivity(intent);
             }
         });
