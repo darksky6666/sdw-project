@@ -8,14 +8,12 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
-import com.example.safefirst.user_quarantine.Controller.AddHealthAssessment;
 import com.example.safefirst.user_quarantine.Controller.AddQuarantineRecord;
 import com.example.safefirst.user_quarantine.Controller.AddSelfTestResult;
 import com.example.safefirst.user_quarantine.Controller.ViewQuarantineRecord;
 
 public class UserUQView extends AppCompatActivity {
 
-    ImageView addHealthAssessment;
     ImageView addSelfTestResult;
     ImageView addQuarantineRecord;
     ImageView viewQuarantineRecord;
@@ -24,15 +22,6 @@ public class UserUQView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_main);
-
-        addHealthAssessment = findViewById(R.id.imageView7);
-        addHealthAssessment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(UserUQView.this, AddHealthAssessment.class);
-                startActivity(intent);
-            }
-        });
 
         addSelfTestResult = findViewById(R.id.imageView3);
         addSelfTestResult.setOnClickListener(new View.OnClickListener() {

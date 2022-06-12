@@ -15,7 +15,6 @@ public class MOHUQView extends AppCompatActivity {
 
     Button selfTest;
     Button quarantineRecord;
-    Button healthAssessment;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

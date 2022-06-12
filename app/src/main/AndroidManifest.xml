@@ -70,11 +70,6 @@
             android:parentActivityName=".user_quarantine.View.UserUQView"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
-            android:name=".user_quarantine.Controller.AddHealthAssessment"
-            android:exported="false"
-            android:parentActivityName=".user_quarantine.View.UserUQView"
-            android:theme="@style/Theme.Design.NoActionBar" />
-        <activity
             android:name=".user_quarantine.Controller.AddSelfTestResult"
             android:exported="false"
             android:parentActivityName=".user_quarantine.View.MainActivity"
