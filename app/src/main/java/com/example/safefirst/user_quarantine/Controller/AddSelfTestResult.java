@@ -1,4 +1,4 @@
-package com.example.safefirst.userquarantine.Controller;
+package com.example.safefirst.user_quarantine.Controller;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,8 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
-import com.example.safefirst.userquarantine.Model.SelfTestModel;
-import com.example.safefirst.userquarantine.View.UserQRView;
+import com.example.safefirst.user_quarantine.Model.SelfTestModel;
+import com.example.safefirst.user_quarantine.View.UserUQView;
 
 public class AddSelfTestResult extends AppCompatActivity {
     EditText editTextType, editTextPlace, editTextDate, editTextTestResult;
@@ -20,7 +20,7 @@ public class AddSelfTestResult extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_self_test_result);
 
-        String phone = "0179875542";
+        String phone = new UserUQView().getPhone();
         editTextType = findViewById(R.id.editTextType);
         editTextPlace = findViewById(R.id.editTextPlace);
         editTextDate = findViewById(R.id.editTextDate);
@@ -41,7 +41,7 @@ public class AddSelfTestResult extends AppCompatActivity {
         cancel_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddSelfTestResult.this, UserQRView.class);
+                Intent intent = new Intent(AddSelfTestResult.this, UserUQView.class);
                 startActivity(intent);
             }
         });

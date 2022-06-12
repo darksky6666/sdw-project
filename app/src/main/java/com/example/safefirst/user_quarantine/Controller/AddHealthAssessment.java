@@ -1,4 +1,4 @@
-package com.example.safefirst.userquarantine.Controller;
+package com.example.safefirst.user_quarantine.Controller;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,8 +10,8 @@ import android.widget.RadioGroup;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
-import com.example.safefirst.userquarantine.Model.HealthAssessmentModel;
-import com.example.safefirst.userquarantine.View.UserQRView;
+import com.example.safefirst.user_quarantine.Model.HealthAssessmentModel;
+import com.example.safefirst.user_quarantine.View.UserUQView;
 
 public class AddHealthAssessment extends AppCompatActivity {
 
@@ -64,7 +64,7 @@ public class AddHealthAssessment extends AppCompatActivity {
         cancel_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddHealthAssessment.this, UserQRView.class);
+                Intent intent = new Intent(AddHealthAssessment.this, UserUQView.class);
                 startActivity(intent);
             }
         });

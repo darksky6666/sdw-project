@@ -1,4 +1,4 @@
-package com.example.safefirst.userquarantine.Controller;
+package com.example.safefirst.user_quarantine.Controller;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -11,8 +11,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
-import com.example.safefirst.userquarantine.Model.QuarantineRecordModel;
-import com.example.safefirst.userquarantine.View.UserQRView;
+import com.example.safefirst.user_quarantine.Model.QuarantineRecordModel;
+import com.example.safefirst.user_quarantine.View.UserUQView;
 
 public class ViewQuarantineRecord extends AppCompatActivity {
 
@@ -21,7 +21,7 @@ public class ViewQuarantineRecord extends AppCompatActivity {
     QuarantineRecordModel db;
     String id, type, location, startDate;
 
-    String phone = new UserQRView().getPhone();
+    String phone = new UserUQView().getPhone();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +38,7 @@ public class ViewQuarantineRecord extends AppCompatActivity {
         ok_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ViewQuarantineRecord.this, UserQRView.class);
+                Intent intent = new Intent(ViewQuarantineRecord.this, UserUQView.class);
                 startActivity(intent);
             }
         });
@@ -57,7 +57,7 @@ public class ViewQuarantineRecord extends AppCompatActivity {
                     type = cursor.getString(1);
                     location = cursor.getString(2);
                     startDate = cursor.getString(3);
-                    quarantineTypeText.setText(type);
+                    quarantineTypeText.setText(type) ;
                     quarantineDateText.setText(startDate);
                     quarantineLocationText.setText(location);
                 }

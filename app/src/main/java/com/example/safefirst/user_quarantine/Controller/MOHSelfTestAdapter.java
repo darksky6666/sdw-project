@@ -1,4 +1,4 @@
-package com.example.safefirst.userquarantine.Controller;
+package com.example.safefirst.user_quarantine.Controller;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;

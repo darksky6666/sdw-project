@@ -1,54 +1,53 @@
-package com.example.safefirst.userquarantine.Model;
+package com.example.safefirst.user_quarantine.Model;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-public class SelfTestModel {
+public class QuarantineRecordModel {
 
     private MainDB mainDB;
     private Context context;
 
-    // Declare variable for Self Test Database
-    private static final String TestResult = "TestResult";
-    private static final String Test_ID = "Test_ID";
-    private static final String Test_Place = "Test_Place";
-    private static final String Test_Type = "Test_Type";
-    private static final String Test_Date = "Test_Date";
-    private static final String Test_Result = "Test_Result";
+    // Declare variable for UserQuarantine Database
+    private static final String UserQuarantine = "UserQuarantine";
+    private static final String UserQ_Type = "UserQ_Type";
+    private static final String UserQ_Location = "UserQ_Location";
+    private static final String UserQ_startDate = "UserQ_startDate";
+    private static final String UserQ_endDate = "UserQ_endDate";
     private static final String User_phoneNum = "User_phoneNum";
 
-    public SelfTestModel(@Nullable Context context) {
+    public QuarantineRecordModel(@Nullable Context context) {
         mainDB = new MainDB(context);
         this.context = context;
     }
 
-    //Self Test CRUD
-    //Create Self Test
-    public void addSelfTest(String place, String type, String date, String result, String phone) {
+    //UserQuarantine CRUD
+    //Create Quarantine
+    public void addUQ(String type, String location, String startDate, String endDate, String phone) {
         SQLiteDatabase db = mainDB.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
-        cv.put(Test_Place, place);
-        cv.put(Test_Type, type);
-        cv.put(Test_Date, date);
-        cv.put(Test_Result, result);
+        cv.put(UserQ_Type, type);
+        cv.put(UserQ_Location, location);
+        cv.put(UserQ_startDate, startDate);
+        cv.put(UserQ_endDate, endDate);
         cv.put(User_phoneNum, phone);
-        long sqlresult = db.insert(TestResult, null, cv);
+        long sqlresult = db.insert(UserQuarantine, null, cv);
         if (sqlresult == -1){
             Toast.makeText(context, "Failed to insert", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(context, "Inserted successfully!", Toast.LENGTH_SHORT).show();
         }
     }
-    // Read Self Test
-    public Cursor displaySelfTest() {
-        String query = "SELECT * FROM " + TestResult;
+
+    // Read Quarantine
+    public Cursor displayUQ() {
+        String query = "SELECT * FROM " + UserQuarantine;
         SQLiteDatabase db = mainDB.getReadableDatabase();
 
         Cursor cursor = null;
@@ -58,18 +57,18 @@ public class SelfTestModel {
         return cursor;
     }
 
-    // Update Self Test
-    public void updateSelfTest(String row_id, String place, String type, String date, String result, String phone) {
+    // Update Quarantine
+    public void updateUQ(String row_id, String type, String location, String startDate, String endDate, String phone) {
         SQLiteDatabase db = mainDB.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
-        cv.put(Test_Place, place);
-        cv.put(Test_Type, type);
-        cv.put(Test_Date, date);
-        cv.put(Test_Result, result);
+        cv.put(UserQ_Type, type);
+        cv.put(UserQ_Location, location);
+        cv.put(UserQ_startDate, startDate);
+        cv.put(UserQ_endDate, endDate);
         cv.put(User_phoneNum, phone);
 
-        long sqlresult = db.update(TestResult, cv, "Test_ID=?", new String[]{row_id});
+        long sqlresult = db.update(UserQuarantine, cv, "UserQ_ID=?", new String[]{row_id});
         if (sqlresult == -1){
             Toast.makeText(context, "Failed to update", Toast.LENGTH_SHORT).show();
         } else {
@@ -77,10 +76,10 @@ public class SelfTestModel {
         }
     }
 
-    // Delete Self Test
-    public void deleteSelfTest(String row_id){
+    // Delete Quarantine
+    public void deleteUQ(String row_id){
         SQLiteDatabase db = mainDB.getWritableDatabase();
-        long sqlresult = db.delete(TestResult, "Test_ID=?", new String[]{row_id});
+        long sqlresult = db.delete(UserQuarantine, "UserQ_ID=?", new String[]{row_id});
         if (sqlresult == -1){
             Toast.makeText(context, "Failed to delete", Toast.LENGTH_SHORT).show();
         } else {
@@ -88,11 +87,9 @@ public class SelfTestModel {
         }
     }
 
-    // Delete All Self Test
-    public void deleteAllSelfTest(){
+    //Delete all quarantine
+    public void deleteAllUQ(){
         SQLiteDatabase db = mainDB.getWritableDatabase();
-        db.execSQL("DELETE FROM " + TestResult);
+        db.execSQL("DELETE FROM " + UserQuarantine);
     }
-
-
 }

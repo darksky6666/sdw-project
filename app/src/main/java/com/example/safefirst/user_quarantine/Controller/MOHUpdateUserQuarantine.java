@@ -1,4 +1,4 @@
-package com.example.safefirst.userquarantine.Controller;
+package com.example.safefirst.user_quarantine.Controller;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
-import com.example.safefirst.userquarantine.Model.QuarantineRecordModel;
+import com.example.safefirst.user_quarantine.Model.QuarantineRecordModel;
 
 public class MOHUpdateUserQuarantine extends AppCompatActivity {
 
@@ -86,7 +86,7 @@ public class MOHUpdateUserQuarantine extends AppCompatActivity {
             editTextUser2.setText(user);
 
         } else {
-            Toast.makeText(this, "No data found.", Toast.LENGTH_SHORT).show();
+
         }
     }
 

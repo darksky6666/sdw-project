@@ -1,4 +1,4 @@
-package com.example.safefirst.userquarantine.Model;
+package com.example.safefirst.user_quarantine.Model;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -8,49 +8,45 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-public class HealthAssessmentModel {
+public class SelfTestModel {
 
     private MainDB mainDB;
     private Context context;
 
-    // Declare variable for Health Assessment Database
-    private static final String HealthAssessment = "HealthAssessment";
-    private static final String HA_ID = "HA_ID";
-    private static final String HA_Q1 = "HA_Q1";
-    private static final String HA_Q2 = "HA_Q2";
-    private static final String HA_Q3 = "HA_Q3";
-    private static final String HA_Q4 = "HA_Q4";
-    private static final String HA_Q5 = "HA_Q5";
+    // Declare variable for Self Test Database
+    private static final String TestResult = "TestResult";
+    private static final String Test_Place = "Test_Place";
+    private static final String Test_Type = "Test_Type";
+    private static final String Test_Date = "Test_Date";
+    private static final String Test_Result = "Test_Result";
     private static final String User_phoneNum = "User_phoneNum";
 
-    public HealthAssessmentModel (@Nullable Context context) {
+    public SelfTestModel(@Nullable Context context) {
         mainDB = new MainDB(context);
         this.context = context;
     }
 
-    //HealthAssessment CRUD
-    //Create HealthAssessment
-    public void addHA(String q1, String q2, String q3, String q4, String q5, String phone) {
+    //Self Test CRUD
+    //Create Self Test
+    public void addSelfTest(String place, String type, String date, String result, String phone) {
         SQLiteDatabase db = mainDB.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
-        cv.put(HA_Q1, q1);
-        cv.put(HA_Q2, q2);
-        cv.put(HA_Q3, q3);
-        cv.put(HA_Q4, q4);
-        cv.put(HA_Q5, q5);
+        cv.put(Test_Place, place);
+        cv.put(Test_Type, type);
+        cv.put(Test_Date, date);
+        cv.put(Test_Result, result);
         cv.put(User_phoneNum, phone);
-        long sqlresult = db.insert(HealthAssessment, null, cv);
+        long sqlresult = db.insert(TestResult, null, cv);
         if (sqlresult == -1){
             Toast.makeText(context, "Failed to insert", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(context, "Inserted successfully!", Toast.LENGTH_SHORT).show();
         }
     }
-
-    // Read Health Assessment
-    public Cursor displayHA() {
-        String query = "SELECT * FROM " + HealthAssessment;
+    // Read Self Test
+    public Cursor displaySelfTest() {
+        String query = "SELECT * FROM " + TestResult;
         SQLiteDatabase db = mainDB.getReadableDatabase();
 
         Cursor cursor = null;
@@ -60,19 +56,18 @@ public class HealthAssessmentModel {
         return cursor;
     }
 
-    // Update Health Assessment
-    public void updateHA(String row_id, String q1, String q2, String q3, String q4, String q5, String phone) {
+    // Update Self Test
+    public void updateSelfTest(String row_id, String place, String type, String date, String result, String phone) {
         SQLiteDatabase db = mainDB.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
-        cv.put(HA_Q1, q1);
-        cv.put(HA_Q2, q2);
-        cv.put(HA_Q3, q3);
-        cv.put(HA_Q4, q4);
-        cv.put(HA_Q5, q5);
+        cv.put(Test_Place, place);
+        cv.put(Test_Type, type);
+        cv.put(Test_Date, date);
+        cv.put(Test_Result, result);
         cv.put(User_phoneNum, phone);
 
-        long sqlresult = db.update(HealthAssessment, cv, "HA_ID=?", new String[]{row_id});
+        long sqlresult = db.update(TestResult, cv, "Test_ID=?", new String[]{row_id});
         if (sqlresult == -1){
             Toast.makeText(context, "Failed to update", Toast.LENGTH_SHORT).show();
         } else {
@@ -80,10 +75,10 @@ public class HealthAssessmentModel {
         }
     }
 
-    // Delete Health Assessment
-    public void deleteHA(String row_id){
+    // Delete Self Test
+    public void deleteSelfTest(String row_id){
         SQLiteDatabase db = mainDB.getWritableDatabase();
-        long sqlresult = db.delete(HealthAssessment, "HA_ID=?", new String[]{row_id});
+        long sqlresult = db.delete(TestResult, "Test_ID=?", new String[]{row_id});
         if (sqlresult == -1){
             Toast.makeText(context, "Failed to delete", Toast.LENGTH_SHORT).show();
         } else {
@@ -91,9 +86,11 @@ public class HealthAssessmentModel {
         }
     }
 
-    //Delete all health assessment
-    public void deleteAllHA(){
+    // Delete All Self Test
+    public void deleteAllSelfTest(){
         SQLiteDatabase db = mainDB.getWritableDatabase();
-        db.execSQL("DELETE FROM " + HealthAssessment);
+        db.execSQL("DELETE FROM " + TestResult);
     }
+
+
 }

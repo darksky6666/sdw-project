@@ -1,4 +1,4 @@
-package com.example.safefirst.userquarantine.View;
+package com.example.safefirst.user_quarantine.View;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
-import com.example.safefirst.userquarantine.Controller.MOHViewSelfTestResult;
-import com.example.safefirst.userquarantine.Controller.MOHViewUserQuarantine;
+import com.example.safefirst.user_quarantine.Controller.MOHViewSelfTestResult;
+import com.example.safefirst.user_quarantine.Controller.MOHViewUserQuarantine;
 
 public class MOHUQView extends AppCompatActivity {
 

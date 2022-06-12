@@ -1,4 +1,4 @@
-package com.example.safefirst.userquarantine.View;
+package com.example.safefirst.user_quarantine.View;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,12 +8,12 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
-import com.example.safefirst.userquarantine.Controller.AddHealthAssessment;
-import com.example.safefirst.userquarantine.Controller.AddQuarantineRecord;
-import com.example.safefirst.userquarantine.Controller.AddSelfTestResult;
-import com.example.safefirst.userquarantine.Controller.ViewQuarantineRecord;
+import com.example.safefirst.user_quarantine.Controller.AddHealthAssessment;
+import com.example.safefirst.user_quarantine.Controller.AddQuarantineRecord;
+import com.example.safefirst.user_quarantine.Controller.AddSelfTestResult;
+import com.example.safefirst.user_quarantine.Controller.ViewQuarantineRecord;
 
-public class UserQRView extends AppCompatActivity {
+public class UserUQView extends AppCompatActivity {
 
     ImageView addHealthAssessment;
     ImageView addSelfTestResult;
@@ -29,7 +29,7 @@ public class UserQRView extends AppCompatActivity {
         addHealthAssessment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UserQRView.this, AddHealthAssessment.class);
+                Intent intent = new Intent(UserUQView.this, AddHealthAssessment.class);
                 startActivity(intent);
             }
         });
@@ -38,7 +38,7 @@ public class UserQRView extends AppCompatActivity {
         addSelfTestResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UserQRView.this, AddSelfTestResult.class);
+                Intent intent = new Intent(UserUQView.this, AddSelfTestResult.class);
                 startActivity(intent);
             }
         });
@@ -47,7 +47,7 @@ public class UserQRView extends AppCompatActivity {
         addQuarantineRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UserQRView.this, AddQuarantineRecord.class);
+                Intent intent = new Intent(UserUQView.this, AddQuarantineRecord.class);
                 startActivity(intent);
             }
         });
@@ -56,7 +56,7 @@ public class UserQRView extends AppCompatActivity {
         viewQuarantineRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UserQRView.this, ViewQuarantineRecord.class);
+                Intent intent = new Intent(UserUQView.this, ViewQuarantineRecord.class);
                 startActivity(intent);
             }
         });

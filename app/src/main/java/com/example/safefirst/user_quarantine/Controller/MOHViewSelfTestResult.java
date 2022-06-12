@@ -1,4 +1,4 @@
-package com.example.safefirst.userquarantine.Controller;
+package com.example.safefirst.user_quarantine.Controller;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.safefirst.R;
-import com.example.safefirst.userquarantine.Model.SelfTestModel;
+import com.example.safefirst.user_quarantine.Model.SelfTestModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;

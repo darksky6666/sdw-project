@@ -1,4 +1,4 @@
-package com.example.safefirst.userquarantine;
+package com.example.safefirst.user_quarantine.View;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +8,6 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
-import com.example.safefirst.userquarantine.View.MOHUQView;
-import com.example.safefirst.userquarantine.View.UserQRView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         goToUserView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, UserQRView.class);
+                Intent intent = new Intent(MainActivity.this, UserUQView.class);
                 startActivity(intent);
             }
         });
