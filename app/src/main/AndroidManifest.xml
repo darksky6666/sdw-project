@@ -16,7 +16,7 @@
 
         <!-- MOH View -->
         <activity
-            android:name=".userquarantine.MOHView"
+            android:name=".userquarantine.View.MOHUQView"
             android:exported="true"
             android:parentActivityName=".userquarantine.MainActivity"
             android:theme="@style/Theme.Design.NoActionBar" />
@@ -24,7 +24,7 @@
             android:name=".userquarantine.Controller.MOHViewSelfTestResult"
             android:exported="false"
             android:label="View Self Test Result(MOH)"
-            android:parentActivityName=".userquarantine.MOHView"
+            android:parentActivityName=".userquarantine.View.MOHUQView"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity
             android:name=".userquarantine.Controller.MOHAddSelfTestResult"
@@ -43,7 +43,7 @@
             android:name=".userquarantine.Controller.MOHViewUserQuarantine"
             android:exported="false"
             android:label="View User Quarantine Record(MOH)"
-            android:parentActivityName=".userquarantine.MOHView"
+            android:parentActivityName=".userquarantine.View.MOHUQView"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity
             android:name=".userquarantine.Controller.MOHAddUserQuarantine"
@@ -62,17 +62,17 @@
         <activity
             android:name=".userquarantine.Controller.ViewQuarantineRecord"
             android:exported="false"
-            android:parentActivityName=".userquarantine.UserView"
+            android:parentActivityName=".userquarantine.View.UserQRView"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
             android:name=".userquarantine.Controller.AddQuarantineRecord"
             android:exported="false"
-            android:parentActivityName=".userquarantine.UserView"
+            android:parentActivityName=".userquarantine.View.UserQRView"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
             android:name=".userquarantine.Controller.AddHealthAssessment"
             android:exported="false"
-            android:parentActivityName=".userquarantine.UserView"
+            android:parentActivityName=".userquarantine.View.UserQRView"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
             android:name=".userquarantine.Controller.AddSelfTestResult"
@@ -80,7 +80,7 @@
             android:parentActivityName=".userquarantine.MainActivity"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
-            android:name=".userquarantine.UserView"
+            android:name=".userquarantine.View.UserQRView"
             android:exported="true"
             android:parentActivityName=".userquarantine.MainActivity"
             android:theme="@style/Theme.Design.NoActionBar" />

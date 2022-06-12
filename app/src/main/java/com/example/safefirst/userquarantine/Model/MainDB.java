@@ -36,4 +36,6 @@ public class MainDB extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS HealthAssessment");
         onCreate(db);
     }
+
+
 }

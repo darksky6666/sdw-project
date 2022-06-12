@@ -1,4 +1,4 @@
-package com.example.safefirst.userquarantine;
+package com.example.safefirst.userquarantine.View;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import com.example.safefirst.R;
 import com.example.safefirst.userquarantine.Controller.MOHViewSelfTestResult;
 import com.example.safefirst.userquarantine.Controller.MOHViewUserQuarantine;
 
-public class MOHView extends AppCompatActivity {
+public class MOHUQView extends AppCompatActivity {
 
     Button selfTest;
     Button quarantineRecord;
@@ -25,7 +25,7 @@ public class MOHView extends AppCompatActivity {
         selfTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MOHView.this, MOHViewSelfTestResult.class);
+                Intent intent = new Intent(MOHUQView.this, MOHViewSelfTestResult.class);
                 startActivity(intent);
             }
         });
@@ -34,7 +34,7 @@ public class MOHView extends AppCompatActivity {
         quarantineRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MOHView.this, MOHViewUserQuarantine.class);
+                Intent intent = new Intent(MOHUQView.this, MOHViewUserQuarantine.class);
                 startActivity(intent);
             }
         });

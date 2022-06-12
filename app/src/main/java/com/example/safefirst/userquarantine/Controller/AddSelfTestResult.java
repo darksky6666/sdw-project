@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
 import com.example.safefirst.userquarantine.Model.SelfTestModel;
-import com.example.safefirst.userquarantine.UserView;
+import com.example.safefirst.userquarantine.View.UserQRView;
 
 public class AddSelfTestResult extends AppCompatActivity {
     EditText editTextType, editTextPlace, editTextDate, editTextTestResult;
@@ -41,7 +41,7 @@ public class AddSelfTestResult extends AppCompatActivity {
         cancel_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddSelfTestResult.this, UserView.class);
+                Intent intent = new Intent(AddSelfTestResult.this, UserQRView.class);
                 startActivity(intent);
             }
         });

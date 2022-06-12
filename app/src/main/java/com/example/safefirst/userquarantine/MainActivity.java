@@ -8,6 +8,8 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
+import com.example.safefirst.userquarantine.View.MOHUQView;
+import com.example.safefirst.userquarantine.View.UserQRView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         goToUserView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, UserView.class);
+                Intent intent = new Intent(MainActivity.this, UserQRView.class);
                 startActivity(intent);
             }
         });
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         goToMOHView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MOHView.class);
+                Intent intent = new Intent(MainActivity.this, MOHUQView.class);
                 startActivity(intent);
             }
         });

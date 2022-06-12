@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
 import com.example.safefirst.userquarantine.Model.QuarantineRecordModel;
-import com.example.safefirst.userquarantine.UserView;
+import com.example.safefirst.userquarantine.View.UserQRView;
 
 public class AddQuarantineRecord extends AppCompatActivity {
     EditText editTextQuarantineType, editTextQuarantineLocation, editTextDate2;
@@ -21,7 +21,8 @@ public class AddQuarantineRecord extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_quarantine_record);
 
-        String phone = "0179875542";
+        String phone = new UserQRView().getPhone();
+
         editTextQuarantineType = findViewById(R.id.editTextQuarantineType);
         editTextQuarantineLocation = findViewById(R.id.editTextQuarantineLocation);
         editTextDate2 = findViewById(R.id.editTextDate2);
@@ -41,7 +42,7 @@ public class AddQuarantineRecord extends AppCompatActivity {
         cancel_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddQuarantineRecord.this, UserView.class);
+                Intent intent = new Intent(AddQuarantineRecord.this, UserQRView.class);
                 startActivity(intent);
             }
         });

@@ -10,7 +10,7 @@
         android:id="@+id/view2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="8dp"
         android:background="#FFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -19,7 +19,7 @@
         android:id="@+id/editTextUQType"
         android:layout_width="363dp"
         android:layout_height="54dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:hint="User Quarantine Type"
         android:inputType="text"
@@ -30,38 +30,10 @@
         app:layout_constraintTop_toTopOf="@+id/view2" />
 
     <EditText
-        android:id="@+id/editTextUQLocation2"
-        android:layout_width="358dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:hint="User Quarantine Location"
-        android:inputType="text"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.603"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextUQType" />
-
-    <EditText
-        android:id="@+id/editTextUQstartDate2"
-        android:layout_width="358dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="User Quarantine Start Date"
-        android:inputType="date"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.603"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextUQLocation2" />
-
-    <EditText
         android:id="@+id/editTextendDate2"
         android:layout_width="363dp"
         android:layout_height="54dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="User Quarantine End Date"
         android:inputType="date"
@@ -75,7 +47,7 @@
         android:id="@+id/editTextUser2"
         android:layout_width="363dp"
         android:layout_height="54dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="User Phone No"
         android:inputType="text"
@@ -89,7 +61,7 @@
         android:id="@+id/update_button2"
         android:layout_width="209dp"
         android:layout_height="55dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="60dp"
         android:text="Update"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,13 +73,41 @@
         android:id="@+id/delete_button2"
         android:layout_width="209dp"
         android:layout_height="55dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="68dp"
         android:text="Delete"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/update_button2" />
+
+    <EditText
+        android:id="@+id/editTextUQstartDate2"
+        android:layout_width="358dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="User Quarantine Start Date"
+        android:inputType="date"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUQLocation2" />
+
+    <EditText
+        android:id="@+id/editTextUQLocation2"
+        android:layout_width="358dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="User Quarantine Location"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUQType" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

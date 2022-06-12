@@ -1,4 +1,4 @@
-package com.example.safefirst.userquarantine;
+package com.example.safefirst.userquarantine.View;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import com.example.safefirst.userquarantine.Controller.AddQuarantineRecord;
 import com.example.safefirst.userquarantine.Controller.AddSelfTestResult;
 import com.example.safefirst.userquarantine.Controller.ViewQuarantineRecord;
 
-public class UserView extends AppCompatActivity {
+public class UserQRView extends AppCompatActivity {
 
     ImageView addHealthAssessment;
     ImageView addSelfTestResult;
@@ -29,7 +29,7 @@ public class UserView extends AppCompatActivity {
         addHealthAssessment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UserView.this, AddHealthAssessment.class);
+                Intent intent = new Intent(UserQRView.this, AddHealthAssessment.class);
                 startActivity(intent);
             }
         });
@@ -38,7 +38,7 @@ public class UserView extends AppCompatActivity {
         addSelfTestResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UserView.this, AddSelfTestResult.class);
+                Intent intent = new Intent(UserQRView.this, AddSelfTestResult.class);
                 startActivity(intent);
             }
         });
@@ -47,7 +47,7 @@ public class UserView extends AppCompatActivity {
         addQuarantineRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UserView.this, AddQuarantineRecord.class);
+                Intent intent = new Intent(UserQRView.this, AddQuarantineRecord.class);
                 startActivity(intent);
             }
         });
@@ -56,10 +56,27 @@ public class UserView extends AppCompatActivity {
         viewQuarantineRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UserView.this, ViewQuarantineRecord.class);
+                Intent intent = new Intent(UserQRView.this, ViewQuarantineRecord.class);
                 startActivity(intent);
             }
         });
 
+    }
+
+    // Get user info
+    private String name = "Ali bin Ahmad";
+    private String ic = "880104201987";
+    private String phone = "0127899954";
+
+    public String getName() {
+        return name;
+    }
+
+    public String getIc() {
+        return ic;
+    }
+
+    public String getPhone() {
+        return phone;
     }
 }

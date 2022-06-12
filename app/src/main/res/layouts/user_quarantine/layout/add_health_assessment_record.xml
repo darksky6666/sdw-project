@@ -191,6 +191,7 @@
                 android:textSize="14sp" />
 
             <RadioGroup
+                android:id="@+id/h1RadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -228,6 +229,7 @@
                 android:textSize="14sp" />
 
             <RadioGroup
+                android:id="@+id/h2RadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -265,6 +267,7 @@
                 android:textSize="14sp" />
 
             <RadioGroup
+                android:id="@+id/h3RadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -302,6 +305,7 @@
                 android:textSize="14sp" />
 
             <RadioGroup
+                android:id="@+id/h4RadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -339,6 +343,7 @@
                 android:textSize="14sp" />
 
             <RadioGroup
+                android:id="@+id/h5RadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -366,7 +371,7 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/confirm_button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -380,7 +385,7 @@
         app:strokeWidth="2dp" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/cancel_button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -390,7 +395,7 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.988"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/confirm_button4"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2"
         app:strokeColor="@color/purple_900"
         app:strokeWidth="2dp" />
