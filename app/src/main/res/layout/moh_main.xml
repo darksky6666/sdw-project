@@ -37,17 +37,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button6" />
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="51dp"
-        android:text="Health Assessment"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
-
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"

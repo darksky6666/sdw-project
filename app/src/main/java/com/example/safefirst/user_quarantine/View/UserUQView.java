@@ -1,38 +1,36 @@
 package com.example.safefirst.user_quarantine.View;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
-import com.example.safefirst.user_quarantine.Controller.AddHealthAssessment;
 import com.example.safefirst.user_quarantine.Controller.AddQuarantineRecord;
 import com.example.safefirst.user_quarantine.Controller.AddSelfTestResult;
 import com.example.safefirst.user_quarantine.Controller.ViewQuarantineRecord;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class UserUQView extends AppCompatActivity {
+public class UserUQView extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-    ImageView addHealthAssessment;
     ImageView addSelfTestResult;
     ImageView addQuarantineRecord;
     ImageView viewQuarantineRecord;
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_main);
 
-        addHealthAssessment = findViewById(R.id.imageView7);
-        addHealthAssessment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(UserUQView.this, AddHealthAssessment.class);
-                startActivity(intent);
-            }
-        });
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
         addSelfTestResult = findViewById(R.id.imageView3);
         addSelfTestResult.setOnClickListener(new View.OnClickListener() {
@@ -78,5 +76,30 @@ public class UserUQView extends AppCompatActivity {
 
     public String getPhone() {
         return phone;
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        switch (id) {
+            case R.id.home:
+                Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.notifications:
+                Toast.makeText(this, "Notification", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.qrscan:
+                Toast.makeText(this, "QR", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.profile:
+                Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
+                return true;
+        }
+
+        return false;
     }
 }

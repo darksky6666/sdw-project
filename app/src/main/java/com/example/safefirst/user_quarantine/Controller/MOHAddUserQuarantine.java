@@ -8,7 +8,7 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
-import com.example.safefirst.user_quarantine.Model.QuarantineRecordModel;
+import com.example.safefirst.Model.UserQuarantine.QuarantineRecordModel;
 
 public class MOHAddUserQuarantine extends AppCompatActivity {
 
@@ -18,7 +18,7 @@ public class MOHAddUserQuarantine extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.moh_add_user_quarantine_record);
+        setContentView(R.layout.moh_add_user_quarantine);
 
         editTextUQType = findViewById(R.id.editTextUQType);
         editTextUQLocation = findViewById(R.id.editTextUQLocation);

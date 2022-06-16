@@ -5,14 +5,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
-import com.example.safefirst.user_quarantine.Model.QuarantineRecordModel;
+import com.example.safefirst.Model.UserQuarantine.QuarantineRecordModel;
 
 public class MOHUpdateUserQuarantine extends AppCompatActivity {
 
@@ -24,7 +23,7 @@ public class MOHUpdateUserQuarantine extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.moh_update_user_quarantine_record);
+        setContentView(R.layout.moh_update_user_quarantine);
 
         editTextUQType = findViewById(R.id.editTextUQType);
         editTextUQLocation2 = findViewById(R.id.editTextUQLocation2);

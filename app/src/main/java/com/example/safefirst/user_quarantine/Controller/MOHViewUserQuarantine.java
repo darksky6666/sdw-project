@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.safefirst.R;
-import com.example.safefirst.user_quarantine.Model.QuarantineRecordModel;
+import com.example.safefirst.Model.UserQuarantine.QuarantineRecordModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -38,7 +38,7 @@ public class MOHViewUserQuarantine extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.moh_view_user_quarantine_record);
+        setContentView(R.layout.moh_view_user_quarantine);
 
         recyclerView = findViewById(R.id.recyclerView);
         add_button2 = findViewById(R.id.add_button2);
