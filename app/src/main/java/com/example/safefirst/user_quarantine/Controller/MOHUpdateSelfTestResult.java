@@ -12,7 +12,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
-import com.example.safefirst.user_quarantine.Model.SelfTestModel;
+import com.example.safefirst.Model.UserQuarantine.SelfTestModel;
 
 public class MOHUpdateSelfTestResult extends AppCompatActivity {
 
