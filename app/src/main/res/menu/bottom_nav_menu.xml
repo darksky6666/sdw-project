@@ -2,21 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/bottom_home"
+        android:id="@+id/home"
         android:title="Home"
         android:icon="@drawable/home"/>
     <item
-        android:id="@+id/bottom_notifications"
+        android:id="@+id/notifications"
         android:title="Notifications"
         android:icon="@drawable/notification"/>
 
     <item
-        android:id="@+id/bottom_qrscan"
+        android:id="@+id/qrscan"
         android:title="Scan QR"
         android:icon="@drawable/qrscan"/>
 
     <item
-        android:id="@+id/bottom_profile"
+        android:id="@+id/profile"
         android:title="Profile"
         android:icon="@drawable/profile"/>
 

@@ -9,7 +9,7 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
-import com.example.safefirst.Model.UserQuarantine.SelfTestModel;
+import com.example.safefirst.user_quarantine.Model.SelfTestModel;
 import com.example.safefirst.user_quarantine.View.UserUQView;
 
 public class AddSelfTestResult extends AppCompatActivity {

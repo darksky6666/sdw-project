@@ -1,4 +1,4 @@
-package com.example.safefirst.Model.UserQuarantine;
+package com.example.safefirst.user_quarantine.Model;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

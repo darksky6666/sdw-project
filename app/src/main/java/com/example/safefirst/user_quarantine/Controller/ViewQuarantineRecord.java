@@ -11,7 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.safefirst.R;
-import com.example.safefirst.Model.UserQuarantine.QuarantineRecordModel;
+import com.example.safefirst.user_quarantine.Model.QuarantineRecordModel;
 import com.example.safefirst.user_quarantine.View.UserUQView;
 
 public class ViewQuarantineRecord extends AppCompatActivity {

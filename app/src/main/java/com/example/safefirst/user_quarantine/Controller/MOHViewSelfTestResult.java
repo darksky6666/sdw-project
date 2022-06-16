@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.safefirst.R;
-import com.example.safefirst.Model.UserQuarantine.SelfTestModel;
+import com.example.safefirst.user_quarantine.Model.SelfTestModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
